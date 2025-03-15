@@ -10,30 +10,6 @@
     <link rel="stylesheet" href="styles/larger.css">
     
     <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="David Whitten - WDD 230 - Web Frontend Development">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/3776765472.jpg">
-    <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney">
-    <style>
-        /* Add styles for the hamburger menu */
-        .hamburger {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-            }
-            nav ul.show {
-                display: flex;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -41,8 +17,7 @@
         <span>David Whitten</span>
     </header>
     <nav>
-        <span class="hamburger" id="hamburger">&#9776;</span>
-        <ul id="menu">
+        <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="#">Chamber</a></li>
@@ -64,12 +39,12 @@
             <p>Number of Visits: Placeholder</p>
         </section>
     <section class="card">
-        <h2>Social Media</h2>
+        <h2>social media</h2>
         <ul>
         <li><strong>Title:</strong> David Whitten - WDD 230 - Web Frontend Development</li>
         <li><strong>Type:</strong> Website</li>
-        <li><strong>Image:</strong> <a href="images/3776765472.jpg">View Hometown Image</a></li>
-        <li><strong>URL:</strong> <a href="https://www.texasalmanac.com/places/new-caney">https://www.texasalmanac.com/places/new-caney</a></li>
+        <li><strong>Image:</strong> <a href="images/3776765472.jpg">Hometown Image</a></li>
+        <li><strong>URL:</strong> <a href="https://www.texasalmanac.com/places/new-caney">https://new-caney.com</a></li>
         </ul>
     </section>
     </main>
@@ -78,18 +53,5 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
-    <script>
-        // JavaScript to toggle the menu
-        document.getElementById('hamburger').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            if (menu.classList.contains('show')) {
-                menu.classList.remove('show');
-                this.innerHTML = '&#9776;';
-            } else {
-                menu.classList.add('show');
-                this.innerHTML = 'X';
-            }
-        });
-    </script>
 </body>
 </html>
