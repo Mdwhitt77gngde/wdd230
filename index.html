@@ -14,6 +14,26 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/3776765472.jpg">
     <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney">
+    <style>
+        /* Add styles for the hamburger menu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+            nav ul.show {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +41,8 @@
         <span>David Whitten</span>
     </header>
     <nav>
-        <ul>
+        <span class="hamburger" id="hamburger">&#9776;</span>
+        <ul id="menu">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="#">Chamber</a></li>
@@ -57,5 +78,18 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script>
+        // JavaScript to toggle the menu
+        document.getElementById('hamburger').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+                this.innerHTML = '&#9776;';
+            } else {
+                menu.classList.add('show');
+                this.innerHTML = 'X';
+            }
+        });
+    </script>
 </body>
 </html>
