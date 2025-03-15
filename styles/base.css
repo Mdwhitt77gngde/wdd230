@@ -44,7 +44,8 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background: #1abc9c;
+    background: #004d40; /* Darker background color for better contrast */
+    color: #ffffff; /* White text color for better contrast */
 }
 
 main {
