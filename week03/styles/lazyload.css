@@ -1,0 +1,31 @@
+/* Center images in one column */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* Adjust as needed */
+    max-width: 600px; /* Optional: Limit the max width */
+}
+
+/* Lazy loading is applied via the HTML attribute `loading="lazy"` */
+
+/* Fade-in from black animation */
+@keyframes fadeFromBlack {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    50% {
+        opacity: 0.5;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+img {
+    opacity: 0; /* Start with invisible */
+    background-color: black; /* Start with black background */
+    animation: fadeFromBlack 1.5s ease-in-out forwards; /* Apply fade-from-black animation */
+}
