@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Whitten's WDD 230 - Web Frontend Development - course assignment portal">
+    <meta name="author" content="David Whitten">
+    <title>Responsive images</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    <meta property="og:title" content="Responsive images">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/3776765472.jpg">
+</head>
+<body>
+    <div class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="table setting" width="1500" height="750">
+        </picture>
+        <picture>
+            <source srcset="images/hero-medium.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-medium.webp" alt="table setting" width="1000" height="500">
+        </picture>
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-small.webp" media="(max-width: 1000px)">
+            <img src="images/hero-small.webp" alt="table setting" width="500" height="250">
+          </picture>
+    </div>
+    </div>
+</body>
+</html>
