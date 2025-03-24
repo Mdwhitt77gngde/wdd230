@@ -1,89 +1,83 @@
-/* Normalize CSS */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
-/* Base CSS */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    nav {
+        grid-column: 1 / 2; 
+        grid-row: 2 / 3; 
+    }
+
+    main {
+        grid-column: 2 / 3; 
+        grid-row: 2 / 3;
+    }
+
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
+    grid-column: 1 / -1; 
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
+    padding: 1rem;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #34495e;
     padding: 1rem;
-    background-color: #444;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 10px 0;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-    align-self: center;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 0;
-        text-align: center;
-        padding: 1rem 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
+nav ul li a.active {
+    background: #2c3e50; 
+    color: #ffffff;
 }
 
 main {
-    padding: 2rem;
+    padding: 20px;
+}
+
+main .centered-content {
+    text-align: center;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    grid-column: 1 / -1;
+    background-color: #2c3e50;
+    font-size: 0.9rem;
     text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
+
