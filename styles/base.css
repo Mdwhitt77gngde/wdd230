@@ -47,8 +47,12 @@ nav ul li a.active {
 }
 
 .hero {
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .hero img {
@@ -57,10 +61,6 @@ nav ul li a.active {
 }
 
 .overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 10px 15px;
@@ -68,6 +68,7 @@ nav ul li a.active {
     font-size: 1.2em;
     text-align: center;
     width: max-content;
+    margin-top: 10px;
 }
 
 main {
