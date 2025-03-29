@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover the Chamber of Commerce, community events, and attractions in New Caney.">
     <meta name="author" content="David Whitten">
-    <title>chamber of Commerce and discover</title>
+    <title>Chamber of Commerce and Discover</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
@@ -18,9 +18,10 @@
     <header>
         <img src="images/David-whitten.png" alt="David Whitten">
         <span>David Whitten, Texas, USA</span>
+        <button id="menu" class="hamburger-button">☰</button>
     </header>
     <nav>
-        <ul>
+        <ul class="navigation">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="chamber/index.html">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
@@ -28,6 +29,12 @@
         </ul>
     </nav>
     <main>
+        <section class="hero">
+            <img src="images/hero-image.webp" alt="Community Gathering" loading="lazy" style="width: 100%; height: auto;">
+            <div class="cta">
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
         <div>
             <section class="content">
                 <h1>Welcome to the Chamber of Commerce</h1>
@@ -73,6 +80,12 @@
                     <li>Music Concert - April 20</li>
                     <li>Art Exhibition - May 5</li>
                 </ul>
+                <h2>Current Events</h2>
+                <p>Stay updated with the latest community happenings!</p>
+                <h2>Weather</h2>
+                <p>Check out the latest weather updates for our area.</p>
+                <h2>Company Spotlight</h2>
+                <p>Learn about local businesses and how they contribute to our community.</p>
                 <h2>Calendar</h2>
                 <p>Check out our <a href="calendar.html">full calendar</a> for more events.</p>
             </aside>
@@ -85,5 +98,6 @@
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/weathervisit.js" defer></script>
     <script src="scripts/visttracker.js" defer></script>
+    <script src="scripts/ham.js" defer></script>
 </body>
 </html>
