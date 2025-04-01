@@ -1,0 +1,28 @@
+{
+    "familyName": "Smith",
+    "dateMovedIn": "2023-09-15",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "John Smith",
+            "gender": "Male",
+            "birthdate": "1980-05-12"
+        },
+        {
+            "name": "Jane Smith",
+            "gender": "Female",
+            "birthdate": "1982-07-19"
+        },
+        {
+            "name": "Emily Smith",
+            "gender": "Female",
+            "birthdate": "2010-03-25"
+        },
+        {
+            "name": "Michael Smith",
+            "gender": "Male",
+            "birthdate": "2012-11-08"
+        }
+    ]
+}
