@@ -19,6 +19,7 @@ body {
     nav {
         grid-column: 1 / 2; 
         grid-row: 2 / 3; 
+        display: block !important; /* override hamburger toggle */
     }
 
     main {
@@ -26,6 +27,13 @@ body {
         grid-row: 2 / 3;
     }
 
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
 }
 
 header {
@@ -34,11 +42,35 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+    position: relative;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
 }
 
 nav {
     background-color: #34495e;
     padding: 1rem;
+    display: none; /* hidden by default on small screens */
+}
+
+.navigation.open {
+    display: block;
 }
 
 nav ul {
@@ -78,6 +110,4 @@ footer {
     font-size: 0.9rem;
     text-align: center;
     padding: 1rem;
-    font-size: 0.9rem;
 }
-

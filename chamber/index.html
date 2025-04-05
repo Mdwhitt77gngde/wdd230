@@ -6,7 +6,6 @@
     <meta name="description" content="David Whitten's WDD 230 - Chamber of Commerce Project">
     <meta name="author" content="David Whitten">
     <title>David Whitten - Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
@@ -18,6 +17,7 @@
 <body>
     <header>
         <img src="images/David-whitten.png" alt="David Whitten">
+        <button id="menu" aria-label="Menu">&#9776;</button>
         <span>David Whitten</span>
     </header>
     <nav>
@@ -40,6 +40,7 @@
         <section class="welcome-message">
             <h1>Welcome to the Chamber of Commerce</h1>
             <p>Your gateway to local businesses and community events.</p>
+        </section>
         <section class="call-to-action">
             <h2>Join the Chamber of Commerce</h2>
             <p>Become a part of our community and enjoy exclusive benefits.</p>
@@ -72,6 +73,7 @@
     </main>
     <footer>
         <p>&copy; 2023 David Whitten, Texas, USA</p>
+        <p>&copy; <span id="year"></span> Awesome Chamber of Commerce | WDD 230 | Contact: info@awesomechamber.org</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
     <script>
@@ -79,5 +81,7 @@
     </script>
     <script src="scripts/getDates.js"></script>
     <script src="scripts/weathervisit.js"></script>
+    <script src="scripts/visttracker.js" defer></script>
+    <script src="scripts/ham.js" defer></script>
 </body>
 </html>
