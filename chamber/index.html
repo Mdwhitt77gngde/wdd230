@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Whitten's WDD 230 - Chamber of Commerce Project">
+    <meta name="author" content="David Whitten">
+    <title>David Whitten - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="David Whitten - Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/3776765472.jpg">
+    <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney">
+</head>
+<body>
+    <header>
+        <img src="images/David-whitten.png" alt="David Whitten">
+        <span>David Whitten</span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <picture>
+            <source srcset="images/newcaney-hero.webp" media="(max-width: 400px)">
+            <source srcset="images/newcaney-hero.webp" media="(max-width: 960px)">
+            <img src="images/newcaney-hero.webp" alt="New Caney, TX" class="hero-image">
+        </picture>
+        <div class="overlay">New Caney, TX</div>
+    </div>
+    <main>
+        <section class="call-to-action">
+            <h2>Join the Chamber of Commerce</h2>
+            <p>Become a part of our community and enjoy exclusive benefits.</p>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <p>Stay updated with the latest events happening in our community.</p>
+            <ul>
+                <li>Business Networking Event - April 15, 2023</li>
+                <li>Community Clean-Up Drive - April 22, 2023</li>
+            </ul>
+        </section>
+        <section class="weather-card">
+            <h2>Weather</h2>
+            <p>Check out the current weather in our area.</p>
+            <div id="weather-placeholder">Weather data will be displayed here.</div>
+        </section>
+        <section class="company-spotlights">
+            <h2>Company Spotlights</h2>
+            <div class="spotlight">
+                <h3>ABC Business</h3>
+                <p>Leading provider of innovative solutions.</p>
+            </div>
+            <div class="spotlight">
+                <h3>XYZ Services</h3>
+                <p>Committed to excellence in customer service.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 David Whitten, Texas, USA</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/weathervisit.js"></script>
+</body>
+</html>
