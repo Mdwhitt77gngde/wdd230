@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Brookshire Brothers",
+        "address": "20327 FM 1485, New Caney, TX 77357",
+        "phone": "(281) 399-3358",
+        "website": "https://www.brookshirebrothers.com",
+        "image": "brookshire.png",
+        "membershipLevel": "Gold",
+        "description": "A local grocery store offering fresh produce and essentials."
+    },
+    {
+        "name": "Pizza Hut",
+        "address": "20040 FM 1485, New Caney, TX 77357",
+        "phone": "(281) 689-2910",
+        "website": "https://www.pizzahut.com",
+        "image": "pizzahut.png",
+        "membershipLevel": "Bronze",
+        "description": "Classic American pizza chain serving pies, pasta & wings."
+    },
+    {
+        "name": "Valero Corner Store",
+        "address": "21051 FM 1485, New Caney, TX 77357",
+        "phone": "(281) 399-8448",
+        "website": "https://www.valero.com",
+        "image": "valero.png",
+        "membershipLevel": "Silver",
+        "description": "Convenience store and gas station."
+    },
+    {
+        "name": "Dollar General",
+        "address": "21474 FM 1485, New Caney, TX 77357",
+        "phone": "(832) 543-5055",
+        "website": "https://www.dollargeneral.com",
+        "image": "dollar_general.png",
+        "membershipLevel": "Silver",
+        "description": "Discount retailer offering household goods and more."
+    },
+    {
+        "name": "Walgreens Pharmacy",
+        "address": "21522 FM 1314, Porter, TX 77365",
+        "phone": "(281) 354-8421",
+        "website": "https://www.walgreens.com",
+        "image": "walgreens.png",
+        "membershipLevel": "Gold",
+        "description": "Pharmacy and retail store with health and wellness products."
+    }
+]

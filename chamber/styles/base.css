@@ -111,3 +111,24 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+ 
+/* Example CSS for grid and list */
+.member {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.grid .member {
+    display: inline-block;
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+
+.list .member {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
