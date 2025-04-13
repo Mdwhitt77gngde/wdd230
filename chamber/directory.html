@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="directory Chamber of Commerce">
-    <meta name="author" content="David Whitten">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="directory Chamber of Commerce" />
+    <meta name="author" content="David Whitten" />
     <title>David Whitten - directory Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="David Whitten - Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/newcaney-hero.webp">
-    <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney">
+
+    <link rel="stylesheet" href="styles/normalize.css" onerror="handleStylesheetError('normalize.css')" />
+    <noscript>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa;
+                color: #212529;
+            }
+        </style>
+        <p>Stylesheet failed to load. Please ensure the file "normalize.css" is present in the "styles" directory.</p>
+    </noscript>
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:title" content="David Whitten - Chamber of Commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/newcaney-hero.webp" />
+    <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney" />
+
+    <script>
+        function handleStylesheetError(fileName) {
+            console.error(`Stylesheet "${fileName}" failed to load.`);
+            alert(`Critical stylesheet "${fileName}" is missing or failed to load. Please check your setup.`);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <img src="images/David-whitten.png" alt="David Whitten">
+        <img src="images/David-whitten.webp" alt="David Whitten" />
         <button id="menu" aria-label="Menu">&#9776;</button>
         <span>David Whitten</span>
     </header>
+
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
+
     <div class="hero">
         <picture>
-            <source srcset="images/newcaney-hero.webp" media="(max-width: 400px)">
-            <source srcset="images/newcaney-hero.webp" media="(max-width: 960px)">
-            <img src="images/newcaney-hero.webp" alt="New Caney, TX" class="hero-image">
+            <source srcset="images/newcaney-hero-small.webp" media="(max-width: 400px)" />
+            <source srcset="images/newcaney-hero-medium.webp" media="(max-width: 960px)" />
+            <img src="images/newcaney-hero.webp" alt="New Caney, TX" class="hero-image" />
         </picture>
         <div class="overlay">New Caney, TX</div>
     </div>
+
     <main>
         <section>
             <div class="view-buttons">
                 <button id="grid">Grid View</button>
                 <button id="list">List View</button>
             </div>
-            <ul id="scroll-container">
-                <!-- Members will be dynamically inserted here -->
-            </ul>
+            <ul id="scroll-container"></ul>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2023 David Whitten, Texas, USA</p>
         <p>&copy; <span id="year"></span> Awesome Chamber of Commerce | WDD 230 | Contact: info@awesomechamber.org</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-    <script>
-        document.getElementById('last-modified').textContent = document.lastModified;
 
-        const gridButton = document.querySelector("#grid");
-        const listButton = document.querySelector("#list");
-        const display = document.querySelector("#scroll-container");
-
-        // Fetch and display members
-        fetch("data/members.json")
-            .then(response => response.json())
-            .then(members => {
-                displayMembers(members, "grid"); // Default to grid view
-            })
-            .catch(error => console.error("Error fetching members:", error));
-
-        // Event listeners for grid and list views
-        gridButton.addEventListener("click", () => {
-            display.classList.add("grid");
-            display.classList.remove("list");
-            updateView("grid");
-        });
-
-        listButton.addEventListener("click", () => {
-            display.classList.add("list");
-            display.classList.remove("grid");
-            updateView("list");
-        });
-
-        // Display members function
-        function displayMembers(members, view) {
-            display.innerHTML = "";
-            members.forEach(member => {
-                const memberElement = document.createElement("li");
-                memberElement.classList.add("member", view);
-
-                memberElement.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}">
-                    <h3>${member.name}</h3>
-                    <p>${member.description}</p>
-                    <p><strong>Address:</strong> ${member.address}</p>
-                    <p><strong>Phone:</strong> ${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                    <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
-                `;
-                display.appendChild(memberElement);
-            });
-        }
-
-        // Update view when switching between grid and list
-        function updateView(view) {
-            fetch("data/members.json")
-                .then(response => response.json())
-                .then(members => {
-                    displayMembers(members, view);
-                })
-                .catch(error => console.error("Error updating view:", error));
-        }
-    </script>
+    <script src="scripts/directory.js" defer></script>
     <script src="scripts/scroll.js" defer></script>
     <script src="scripts/ham.js" defer></script>
-    
 </body>
 </html>
