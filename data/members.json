@@ -43,5 +43,23 @@
         "image": "images/walgreens.png",
         "membershipLevel": "Gold",
         "description": "Pharmacy and retail store."
+    },
+    {
+        "name": "Starbucks",
+        "address": "21693 FM 1314, Porter, TX 77365",
+        "phone": "(281) 354-1234",
+        "website": "https://www.starbucks.com",
+        "image": "images/starbucks.png",
+        "membershipLevel": "Gold",
+        "description": "Coffeehouse chain known for its signature roasts and light bites."
+    },
+    {
+        "name": "Home Depot",
+        "address": "21800 FM 1314, Porter, TX 77365",
+        "phone": "(281) 354-5678",
+        "website": "https://www.homedepot.com",
+        "image": "images/home_depot.png",
+        "membershipLevel": "Silver",
+        "description": "Home improvement supplies and tools retailer."
     }
 ]
