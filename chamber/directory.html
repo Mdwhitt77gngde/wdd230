@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="directory Chamber of Commerce" />
-    <meta name="author" content="David Whitten" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="directory Chamber of Commerce" >
+    <meta name="author" content="David Whitten" >
     <title>David Whitten - directory Chamber of Commerce</title>
-
-    <link rel="stylesheet" href="styles/normalize.css" onerror="handleStylesheetError('normalize.css')" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!--
     <noscript>
         <style>
             body {
@@ -18,7 +18,7 @@
         </style>
         <p>Stylesheet failed to load. Please ensure the file "normalize.css" is present in the "styles" directory.</p>
     </noscript>
-
+    -->
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/larger.css" />
     <link rel="icon" href="images/favicon.ico" />
@@ -26,7 +26,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/newcaney-hero.webp" />
     <meta property="og:url" content="https://www.texasalmanac.com/places/new-caney" />
-
     <script>
         function handleStylesheetError(fileName) {
             console.error(`Stylesheet "${fileName}" failed to load.`);
@@ -40,7 +39,6 @@
         <button id="menu" aria-label="Menu">&#9776;</button>
         <span>David Whitten</span>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -49,7 +47,6 @@
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
-
     <div class="hero">
         <picture>
             <source srcset="images/newcaney-hero-small.webp" media="(max-width: 400px)" />
@@ -58,7 +55,6 @@
         </picture>
         <div class="overlay">New Caney, TX</div>
     </div>
-
     <main>
         <section>
             <div class="view-buttons">
@@ -68,13 +64,11 @@
             <ul id="scroll-container"></ul>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2023 David Whitten, Texas, USA</p>
         <p>&copy; <span id="year"></span> Awesome Chamber of Commerce | WDD 230 | Contact: info@awesomechamber.org</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/scroll.js" defer></script>
     <script src="scripts/ham.js" defer></script>
